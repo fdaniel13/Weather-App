@@ -6,9 +6,9 @@ window.addEventListener('load',()=>{
         navigator.geolocation.getCurrentPosition(position=>{
                 long=position.coords.longitude;
                 lat=position.coords.latitude;
-
+                const apikey;
                 const proxy='https://cors-anywhere.herokuapp.com/';
-                const api=`${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=e9ad889c214cdd99f48384e6dd84d239&units=metric`;
+                const api=`${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apikey}&units=metric`;
          
                 fetch(api)
                 .then(response=>{
